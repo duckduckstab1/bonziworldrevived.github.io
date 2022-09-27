@@ -303,7 +303,11 @@ input[type="text"] {
 
 .bubble_autowidth {
   width: auto !important;
-  }
+}
+
+.bubble_autoheight {
+  height: auto !important;
+}
 .bonzi_status {
     position: absolute;
     border-style: solid;
