@@ -723,6 +723,11 @@ body.vaporwave #chat_send {
   box-sizing: border-box;
   overflow: hidden; 
 }
+
+#page_arcade_menu {
+  width: 1024;
+  overflow: hidden; 
+}
 .message_cont_arcade {
   position: absolute;
   max-width: 100%;
