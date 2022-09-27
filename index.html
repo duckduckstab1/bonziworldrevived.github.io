@@ -78,7 +78,7 @@
                 <a href='#' onclick='useSapi5 = !useSapi5'>Toggle SAPI5</a>
                 <br/>
                 <a href='#' onclick='$("#page_sapi5_settings").show()'>Sapi5 Settings</a>
-				<span hidden><button onclick='$("#page_game1").show(); $("#game_cont").html(`<object width="270" height="270"> <param name="movie" value="tour.swf"> <param name="play" value="false"> <embed src="tour.swf" width="270" height="270" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"> </embed> </object>`)'>Games</button></span>
+				<button onclick='$("#page_arcade_menu").show();'>Arcade</button>
             </div>
             <div id="room_info">
                 <br />
@@ -171,14 +171,11 @@
                     <b>When is it over?&#32;</b><span id="ban_end"></span><br />
                 </div>
             </div>
-            <div class="page no_selection" id="page_game1" style="display: none;">
+            <div class="page no_selection" id="page_arcade_menu" style="display: none;">
                 <div class="message_cont" id="ban_cont">
-                    <img src="/img/ban/logo.png" /><br />
-                    <br />
-                    <h1>This is a game</h1>
-                    <br />
-                    <br />
-					<div id="game_cont"></div>
+					<iframe id="arcade_placeholder_cont" href="./arcade/arcade.html" width="640" height="480"></iframe>
+                    <br>
+                    <button onclick="$('#page_arcade_menu').hide();">Close</button>
                 </div>
             </div>
             <div class="page no_selection" id="page_sapi5_settings" style="display: none;">
