@@ -88,7 +88,7 @@ body, html {
   left: 0;
   z-index: 999; 
 }
-.xp_dialog, .message_cont, .message_cont_pinball, .message_cont_solitaire {
+.xp_dialog, .message_cont,  .message_cont_arcade, .message_cont_pinball, .message_cont_solitaire {
   background: #ffffe1;
   color: #000;
   -webkit-border-radius: 9px;
