@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<title lang="en">BonziWORLD Revived+</title>
+	<title lang="en">BonziWORLD Revived Remastered</title>
 	<title lang="fr">BonziMONDE ressuscité +</title>
 	<title lang="ru">Бонзи МИР возрожден +</title>
         <!-- <title>BonziWORLD Revived+</title> -->
@@ -39,6 +39,7 @@
         <link rel="shortcut icon" href="./favicons/favicon.ico" />
         <meta name="msapplication-config" content="./favicons/browserconfig.xml" />
         <script src="./js/lib/purify.min.js"></script>
+        <script src="./js/lib/SAME.js"></script>
         <script src="./js/lib/easeljs.min.js"></script>
         <script src="./js/lib/preloadjs-0.6.2.min.js"></script>
         <script src="./js/lib/jquery.min.js"></script>
@@ -73,6 +74,7 @@
         <link href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css" rel="stylesheet" />
     </head>
     <body>
+        <div id="eas_player" style="display: none;"></div>
         <div id="content">
             <div id="bonzi_tv"></div>
             <div id="settings">
@@ -124,6 +126,7 @@
                         <option value="default"></option>
                         <option value="news"></option>
                         <option value="bonzi_tv"></option>
+                        <option value="weather"></option>
                     </datalist>
                     <div id="login_go" onclick="login()"></div>
                     <div id="login_error" class="no_selection" style="display: none;"></div>
@@ -152,7 +155,21 @@
                     <br />
                     Room ID -&#32;<span class="room_id">???</span><br />
                     <br>
-                    If the server is down for longer than 5 seconds, BonziWORLD Revived+ will notify you that it will use server.erik.red as it's server.
+                    If the server is down for longer than 5 seconds, BonziWORLD Revived Remastered will notify you that it will use server.erik.red as it's server.
+                </div>
+            </div>
+            <div class="page no_selection" id="page_weather_privacy" style="display: none;">
+                <div class="message_cont" id="error_cont">
+                    <img src="/img/error/logo2.png" /><br />
+                    <br />
+                    <h1>Before you join...</h1>
+                    <br>
+                    We respect your privacy. However, we want to know if you are streaming/recording while using this website. If you choose yes, the default location for Weatherscan will be changed to Long Island to protect your privacy. Do you want to hide your location from Weatherscan?
+                    <br>
+                    <small>The emulator is not official and is run by The6TV. You are responsible for your actions.</small>
+                    <br>
+                    <button id="privacy_yes">Yes</button> 
+                    <button id="privacy_no">No</button>
                 </div>
             </div>
             <div id="page_dm" class="message_cont" style="display: none;">

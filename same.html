@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>SAME encoder client-side demo</title>
+    <script src="js/lib/SAME.js"></script>
+    <script type="text/javascript">
+      var Encoder = window.SAME.Encoder;
+      var Writer = window.SAME.Writer;
+      
+      var message = {
+        originator: 'CIV',
+        code: 'CDW',
+        region: {
+          subdiv: '0',
+          stateCode: '00',
+          countyCode: '000'
+        },
+        length: 600,
+        start: {
+          day: 123,
+          hour: 5,
+          minute: 30
+        },
+        sender: 'BZWRVDRM'
+      };
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('pre#obj').innerHTML =
+          JSON.stringify(message, false, 2);
+      
+        var player = Writer.write(Encoder.encode(message), 'div#player');
+
+        document.querySelector('a#wav')
+          .href = player.querySelector('source').src;
+      });
+    </script>
+  </head>
+  <body>
+    <p>Message object</p>
+    <pre id="obj"> </pre>
+
+    <p>Audio player</p>
+    <div id="player"></div>
+
+    <p>Wave file link</p>
+    <a id="wav" href="" download="output.wav">output.wav</a>
+  </body>
+</html>
